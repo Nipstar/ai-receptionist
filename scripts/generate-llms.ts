@@ -3,6 +3,7 @@
  * Format follows the llms.txt convention: H1, blockquote summary, then sections of links with
  * one-line descriptions. llms-full.txt adds the full page copy.
  */
+import './load-env';
 import { writeFileSync } from 'node:fs';
 import { site } from '../src/site.config';
 import { fill, money, overage, price } from '../src/lib/format';

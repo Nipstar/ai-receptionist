@@ -1,4 +1,4 @@
-# Cloudflare Pages headers. (Vercel: mirror these in vercel.json if you deploy there.)
+# Cloudflare Pages headers. Vercel uses vercel.json instead: keep the two in sync.
 # CSP allows the LeadConnector (GHL) chat widget and Google Tag Manager. 'unsafe-inline' for
 # scripts is required by Next.js static export (inline hydration data). After switching the chat
 # widget on, open the browser console on a live page and add any host it reports as blocked.

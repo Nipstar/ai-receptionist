@@ -1,16 +1,16 @@
 # CLAUDE.md
 
-Marketing site for aireceptionistforsmallbusiness.net: a US-market AI receptionist (phone) + website chat plan, $97/month, 250 call minutes, sold by Antek Automation. Static Next.js (App Router, `output: 'export'`, `trailingSlash: true`), TypeScript, Tailwind CSS v4. Hosted on Cloudflare Pages (`npm run build`, output `out/`). No server runtime: nothing may need one.
+Marketing site for aireceptionistforsmallbusiness.net: a US-market AI receptionist (phone) + website chat plan, $97/month, 250 call minutes, sold by Antek Automation. Static Next.js (App Router, `output: 'export'`, `trailingSlash: true`), TypeScript, Tailwind CSS v4. Hosted on Cloudflare Pages (`npm run build`, output `out/`, headers in `public/_headers`) or Vercel (headers in `vercel.json`; keep the two in sync). No server runtime: nothing may need one.
 
 ## Where things live
 
-- `src/site.config.ts`: the single source for every price, minute count, phone number, URL and ID. **Never hard-code a price, minute figure or phone number in a page, component or content file.** Content strings use tokens (`{price}`, `{minutes}`, `{overage}`, `{goLive}`, `{alertAt}`, `{ionos.monthly}`, `{market.humanLow}`...) filled by `fill()` in `src/lib/format.ts`. Add a token there if you need a new figure.
+- `src/site.config.ts`: the single source for every price, minute count, phone number, URL and ID. Deployment values (email, demo phone, GHL URLs/IDs, go-live, GTM, site URL) come from `NEXT_PUBLIC_*` env vars at build time, falling back to `[[PLACEHOLDER]]`s (see `.env.example`); read each by its literal `process.env.NEXT_PUBLIC_X` name so Next.js inlines it. Prices, minutes and copy stay in the file. **Never hard-code a price, minute figure or phone number in a page, component or content file.** Content strings use tokens (`{price}`, `{minutes}`, `{overage}`, `{goLive}`, `{alertAt}`, `{ionos.monthly}`, `{market.humanLow}`...) filled by `fill()` in `src/lib/format.ts`. Add a token there if you need a new figure.
 - `src/content/`: all copy. `home.ts`, `pricing.ts`, `faqs.ts` (verbatim from the design), `industries.ts` (one object per `/for/[industry]/` page), `compare.ts` (`/compare/[slug]/`), `competitors.ts` (shared by every comparison table, dated `site.pricesChecked`).
 - `src/components/`: shared UI. Every "Start" button is `<StartLink>` (GHL order URL + UTMs + `click_start`). Every "Call" button is `<CallLink>` (`tel:` + `click_call`), with `<DemoNumber>` showing the number as text.
 - `src/lib/schema.ts`: JSON-LD built from the same data the page renders. FAQ JSON-LD and the visible `<Faq>` both render from one array.
 - `src/app/globals.css`: brand tokens in `@theme`. `md:` (820px) is the desktop layout.
 - `reference/design/*.dc.html`: the design source (Main = home, Pricing, Salons = industry template, BrandBoard). `reference/logo/`: the marks.
-- `scripts/check.ts`: the checks. `scripts/generate-llms.ts`: writes `public/llms.txt` and `llms-full.txt` from content (prebuild; both files are gitignored).
+- `scripts/check.ts`: the checks. Scripts import `scripts/load-env.ts` first so they see the same env files as `next build`. `scripts/generate-llms.ts`: writes `public/llms.txt` and `llms-full.txt` from content (prebuild; both files are gitignored).
 
 ## Copy rules (enforced by `scripts/check.ts`)
 

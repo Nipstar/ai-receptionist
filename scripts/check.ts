@@ -9,6 +9,7 @@
  * 5. Every internal link resolves to a built file
  * Warnings (do not fail): titles over 60 chars, descriptions over 155.
  */
+import './load-env';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { site } from '../src/site.config';
