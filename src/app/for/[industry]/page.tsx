@@ -92,8 +92,8 @@ export default async function IndustryPage({ params }: Props) {
             )}
             <p className="mt-8 mb-0 text-[15px] text-slate">
               Also answering calls for{' '}
-              <Link href={routes.industry(related[0].slug)}>{related[0].name.toLowerCase()}</Link> and{' '}
-              <Link href={routes.industry(related[1].slug)}>{related[1].name.toLowerCase()}</Link>.
+              <Link href={routes.industry(related[0].slug)} className="underline underline-offset-2">{related[0].name.toLowerCase()}</Link> and{' '}
+              <Link href={routes.industry(related[1].slug)} className="underline underline-offset-2">{related[1].name.toLowerCase()}</Link>.
             </p>
           </div>
           <div>

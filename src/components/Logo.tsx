@@ -37,7 +37,6 @@ export function Logo({ variant = 'light', href = '/' }: { variant?: 'light' | 'd
     <Link
       href={href}
       className={`flex flex-none items-center gap-2.5 whitespace-nowrap no-underline md:gap-3 ${dark ? 'text-white hover:text-white' : 'text-ink hover:text-ink'}`}
-      aria-label={`${site.name} ${site.tagline}, home`}
     >
       <Mark size={36} className="size-8 md:size-9" />
       <span className="flex flex-col leading-[1.1]">

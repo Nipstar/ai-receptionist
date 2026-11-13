@@ -99,8 +99,8 @@ export default async function ComparePage({ params }: Props) {
           <SectionHead title="Common questions" size="md" className="mb-8" />
           <Faq items={c.faqs} />
           <p className="mt-10 mb-0 text-[15px] text-slate">
-            More on <Link href={routes.pricing}>AI receptionist pricing</Link> or see{' '}
-            <Link href="/">how the receptionist works</Link>.
+            More on <Link href={routes.pricing} className="underline underline-offset-2">AI receptionist pricing</Link> or see{' '}
+            <Link href="/" className="underline underline-offset-2">how the receptionist works</Link>.
           </p>
         </div>
       </section>
