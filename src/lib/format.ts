@@ -27,6 +27,8 @@ export const tokens: Record<string, string> = {
   alertAt: `${site.plan.alertAtPercent}%`,
   goLive: site.plan.goLive,
   textAlertApproval: site.plan.textAlertApproval,
+  typicalLow: String(site.plan.typicalCallMinutes.low),
+  typicalHigh: String(site.plan.typicalCallMinutes.high),
   owner: site.owner,
   pricesChecked: site.pricesChecked,
   minuteRounding: site.policy.minuteRounding,

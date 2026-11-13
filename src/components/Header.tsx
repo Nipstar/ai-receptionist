@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Logo } from './Logo';
+import { NavLink } from './NavLink';
 import { StartLink } from './StartLink';
 import { industries } from '@/content/industries';
 import { routes } from '@/lib/routes';
@@ -37,9 +38,9 @@ export function Header() {
           <Link href="/#how" className={navLink}>
             How it works
           </Link>
-          <Link href={routes.pricing} className={navLink}>
+          <NavLink href={routes.pricing} className={navLink}>
             Pricing
-          </Link>
+          </NavLink>
           <details className="menu relative">
             <summary className={`${navLink} flex items-center gap-1.5`}>
               Industries <Chevron />
