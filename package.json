@@ -1,0 +1,35 @@
+{
+  "name": "aireceptionistforsmallbusiness-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "llms": "tsx scripts/generate-llms.ts",
+    "prebuild": "tsx scripts/generate-llms.ts && tsx scripts/check.ts --source",
+    "build": "next build",
+    "check": "tsx scripts/check.ts && npm run lint && npm run typecheck",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "icons": "node scripts/make-icons.mjs",
+    "preview": "npx serve out"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@fontsource/space-grotesk": "^5.3.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3"
+  }
+}

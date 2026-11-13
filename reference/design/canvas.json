@@ -1,0 +1,98 @@
+{
+ "v": 3,
+ "attachments": {},
+ "boards": {
+  "Main.dc.html": {
+   "expand": "fill",
+   "h": 5600,
+   "title": "Home  /",
+   "w": 1440,
+   "x": -1916,
+   "y": 0
+  },
+  "Pricing.dc.html": {
+   "expand": "fill",
+   "h": 3200,
+   "title": "Pricing  /pricing",
+   "w": 1440,
+   "x": -220,
+   "y": 0
+  },
+  "Salons.dc.html": {
+   "expand": "fill",
+   "h": 3000,
+   "title": "Industry template  /for/salons",
+   "w": 1440,
+   "x": 3040,
+   "y": 0
+  },
+  "BrandBoard.dc.html": {
+   "x": 1300,
+   "y": 0,
+   "w": 1600,
+   "h": 2060,
+   "title": "Brand board"
+  }
+ },
+ "createdOnFiles": {
+  "at": "2026-11-13T13:30:00Z",
+  "v": 1
+ },
+ "designSystems": [],
+ "launch": {
+  "view": "canvas"
+ },
+ "noteOrder": [
+  "title",
+  "seoHome",
+  "seoPricing",
+  "seoIndustry",
+  "build"
+ ],
+ "pages": [],
+ "title": "AI Receptionist for Small Business – demo site",
+ "order": [
+  "Main.dc.html",
+  "Pricing.dc.html",
+  "Salons.dc.html",
+  "BrandBoard.dc.html"
+ ],
+ "notes": {
+  "build": {
+   "fill": "orange",
+   "text": "BUILD NOTES\nNext.js (App Router, static export), Vercel or Cloudflare Pages. Not Astro.\nllms.txt + llms-full.txt like JobsLocked.\nOne H1 per page, question-style H2s, answer-first paragraphs (AI Overviews quote these).\nCTA = Start for $97 (GHL order form / Stripe) + Call the demo line. No long forms.\nPlaceholders in [BRACKETS] need real values: demo number, overage rate, go-live time.",
+   "w": 440,
+   "x": -356,
+   "y": 5788
+  },
+  "seoHome": {
+   "fill": "blue",
+   "text": "HOME SEO\nTitle: AI Receptionist for Small Business | $97/mo, Calls + Chat\nMeta: Every call answered in your business name, website chat included, call summary sent to you. $97 a month, 250 minutes, no setup fee, month to month.\nH1: Every call answered. For $97 a month.\nPrimary: ai receptionist for small business (2.4k–3.6k, KD 28–32)\nSecondary: ai answering service for small business, answering service for small business, affordable answering service, ai phone answering service\nSchema: Organization, WebSite, Service + Offer ($97), FAQPage (verbatim with visible FAQ), SpeakableSpecification",
+   "w": 440,
+   "x": -1916,
+   "y": 5788
+  },
+  "seoIndustry": {
+   "fill": "blue",
+   "text": "INDUSTRY PAGES (template)\n/for/salons, /for/dental, /for/contractors, /for/law-firms, /for/real-estate, /for/property-management\nTitle pattern: AI Receptionist for [Industry] | Calls + Chat for $97/mo\nOne real example call per page, industry FAQs, same plan block. Unique copy per page, not find-and-replace.\nContractors page links up to the done-for-you plan.\nBlog/comparison: AI receptionist cost, best AI receptionist for small business, IONOS AI Receptionist alternative, RingCentral AI Receptionist alternative, answering service vs AI receptionist.",
+   "w": 440,
+   "x": -876,
+   "y": 5788
+  },
+  "seoPricing": {
+   "fill": "blue",
+   "text": "PRICING SEO\nTitle: AI Receptionist Pricing: $97/mo for 250 Minutes | No Setup Fee\nMeta: What an AI receptionist costs, what counts as a minute, and how $97 compares with IONOS, RingCentral, Dialzara and human answering services.\nPrimary: ai receptionist cost (500, KD 20), ai receptionist pricing\nSecondary: cheap answering service (500, KD 0), affordable answering service, cheapest ai answering service\nSchema: Product + Offer + UnitPriceSpecification (overage), FAQPage\nCompetitor prices: checked Nov 2026 from vendor pages and 2026 roundups. Re-check before launch.",
+   "w": 440,
+   "x": -1396,
+   "y": 5788
+  },
+  "title": {
+   "kind": "title1",
+   "maxW": 4480,
+   "text": "aireceptionistforsmallbusiness.net · demo site (US)",
+   "w": 240,
+   "x": -1916,
+   "y": -316
+  }
+ }
+}
