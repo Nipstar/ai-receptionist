@@ -21,3 +21,9 @@
 
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
+
+# OG images are exported without a file extension (Next.js static export): serve them as PNG.
+/opengraph-image
+  Content-Type: image/png
+/*/opengraph-image
+  Content-Type: image/png
