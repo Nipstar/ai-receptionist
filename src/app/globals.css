@@ -31,7 +31,7 @@
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
   /* Mobile breakpoint is 820px: `md:` is the desktop layout */
-  --breakpoint-md: 820px;
+  --breakpoint-md: 51.25rem; /* 820px, in rem so Tailwind orders it correctly after sm */
 
   --tracking-tightest: -0.035em;
   --tracking-tight: -0.03em;
