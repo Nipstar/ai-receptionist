@@ -8,6 +8,7 @@
     "llms": "tsx scripts/generate-llms.ts",
     "prebuild": "tsx scripts/generate-llms.ts && tsx scripts/check.ts --source",
     "build": "next build",
+    "postbuild": "tsx scripts/check.ts",
     "check": "tsx scripts/check.ts && npm run lint && npm run typecheck",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -31,5 +32,8 @@
     "tailwindcss": "^4.3.5",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=20.9"
   }
 }
