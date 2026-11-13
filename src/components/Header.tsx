@@ -32,7 +32,7 @@ function Chevron() {
 export function Header() {
   return (
     <header className="relative z-20 border-b border-line bg-paper">
-      <div className="wrap flex h-[76px] items-center justify-between gap-6">
+      <div className="wrap flex h-[76px] items-center justify-between gap-3 md:gap-6">
         <Logo />
         <nav aria-label="Main" className="hidden items-center gap-7 text-[15px] font-medium md:flex">
           <Link href="/#how" className={navLink}>
@@ -62,8 +62,8 @@ export function Header() {
             FAQ
           </Link>
         </nav>
-        <div className="flex items-center gap-2.5">
-          <StartLink className={btn.small}>Start for {price}</StartLink>
+        <div className="flex items-center gap-2">
+          <StartLink className={`${btn.small} whitespace-nowrap max-md:px-4 max-md:text-sm max-[360px]:hidden`}>Start for {price}</StartLink>
           <details className="menu md:hidden">
             <summary
               className="flex size-11 items-center justify-center rounded-full border border-btn-line bg-white text-ink"
