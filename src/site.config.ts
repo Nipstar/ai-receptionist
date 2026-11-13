@@ -46,7 +46,7 @@ export const site = {
 
 export type Site = typeof site;
 
-const PLACEHOLDER = /\[\[[^\]]*\]\]/;
+const PLACEHOLDER = /\[\[[A-Z][A-Z0-9_]*(?::[^\]]*)?\]\]/;
 
 /** True while a config value is still a [[PLACEHOLDER]]. */
 export function isPlaceholder(value: string): boolean {
